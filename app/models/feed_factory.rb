@@ -112,9 +112,9 @@ class FeedFactory < ApplicationController
       .order('created_at desc')
       .limit(@limit)
       .load
-
+      
     # sort properly
-    @feeds.reverse!
+    @feeds.reverse! unless @feeds.blank?
 
     # calculate feeds
     @feeds = calculate_feeds(@feeds)
