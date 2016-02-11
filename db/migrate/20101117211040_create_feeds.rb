@@ -11,9 +11,12 @@ class CreateFeeds < ActiveRecord::Migration
       t.text :data6
       t.text :data7
       t.text :data8
-
+      t.integer :channel_id
+      
       t.timestamps
     end
+    
+    add_index :feeds, :channel_id
   end
 
   def self.down

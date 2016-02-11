@@ -9,7 +9,7 @@ class AddFieldOptionsToChannels < ActiveRecord::Migration
 		add_column :channels, :options7, :text
 		add_column :channels, :options8, :text
   end
-
+  
   def self.down
 		remove_column :channels, :options1
 		remove_column :channels, :options2
